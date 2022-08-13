@@ -16,7 +16,7 @@ end
 function updateCore()
     local subUrl = "core/"
 
-    os.remove(subUrl)
+    os.execute("rm " .. subUrl .. " -r")
 
     os.execute("mkdir core")
     os.execute("wget -f " .. mainUrl .. subUrl .. "db.lua " .. subUrl .. "db.lua")
@@ -26,7 +26,7 @@ end
 function updateAssembly()
     local subUrl = "assembly/"
 
-    os.remove(subUrl)
+    os.execute("rm " .. subUrl .. " -r")
 
     os.execute("mkdir assembly")
     os.execute("wget -f " .. mainUrl .. subUrl .. "main.lua " .. subUrl .. "main.lua")
