@@ -29,8 +29,10 @@ function updateAssembly()
     os.execute("rm " .. subUrl .. " -r")
 
     os.execute("mkdir assembly")
-    
+
     download(mainUrl, subUrl, "main")
+    download(mainUrl, subUrl, "recipes")
+    download(mainUrl, subUrl, "addresses")
 end
 
 function updateUpdater()

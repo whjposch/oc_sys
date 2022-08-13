@@ -1,7 +1,7 @@
-local db = require("core/db.lua")
+local assembly = require("assembly/main.lua")
 
 function main()
-    print(db.getItem())
+    assembly.start()
 end
 
 main()
