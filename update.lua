@@ -9,14 +9,18 @@ function update()
 end
 
 function updateCore()
+    local subUrl = "core/"
+
     os.execute("mkdir core")
-    os.execute("wget -f " .. mainUrl .. "core/db.lua")
+    os.execute("wget -f " .. mainUrl .. subUrl .. "db.lua " .. subUrl .. "db.lua")
 
 end
 
 function updateAssembly()
+    local subUrl = "assembly/"
+
     os.execute("mkdir assembly")
-    os.execute("wget -f " .. mainUrl .. "assembly/main.lua")
+    os.execute("wget -f " .. mainUrl .. subUrl .. "db.lua " .. subUrl .. "main.lua")
 
 end
 
