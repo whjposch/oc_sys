@@ -19,8 +19,8 @@ function updateCore()
     os.execute("rm " .. subUrl .. " -r")
 
     os.execute("mkdir core")
-    os.execute("wget -f " .. mainUrl .. subUrl .. "db.lua " .. subUrl .. "db.lua")
 
+    download(mainUrl, subUrl, "db")
 end
 
 function updateAssembly()
@@ -29,8 +29,8 @@ function updateAssembly()
     os.execute("rm " .. subUrl .. " -r")
 
     os.execute("mkdir assembly")
-    os.execute("wget -f " .. mainUrl .. subUrl .. "main.lua " .. subUrl .. "main.lua")
-
+    
+    download(mainUrl, subUrl, "main")
 end
 
 function updateUpdater()
