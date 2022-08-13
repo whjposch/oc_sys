@@ -1,7 +1,8 @@
 local mainUrl = "https://raw.githubusercontent.com/whjposch/oc_sys/main/"
 
 function download(mainUrl, subUrl, fileName)
-    os.execute("wget -f" .. mainUrl .. subUrl .. fileName .. subUrl .. fileName .. ".lua")
+    print("wget -f" .. mainUrl .. subUrl .. fileName .. subUrl .. fileName .. ".lua")
+    -- os.execute("wget -f" .. mainUrl .. subUrl .. fileName .. subUrl .. fileName .. ".lua")
 end
 
 function update()
