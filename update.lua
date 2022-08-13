@@ -2,11 +2,11 @@ local mainUrl = "https://raw.githubusercontent.com/whjposch/oc_sys/main/"
 
 
 function download(mainUrl, subUrl, fileName)
-    return "wget " .. mainUrl .. subUrl .. fileName .. subUrl .. fileName .. ".lua -f"
+    os.execute("wget -f" .. mainUrl .. subUrl .. fileName .. subUrl .. fileName .. ".lua")
 end
 
 function update()
-     os.execute("wget -f " .. mainUrl .. "manage.lua")
+     download(mainUrl, "", "manage")
 
      updateCore()
      updateAssembly()
@@ -36,7 +36,7 @@ function updateAssembly()
 end
 
 function updateUpdater()
-    os.execute("wget -f " .. mainUrl .. "update.lua")
+    download(mainUrl, "", "update.lua")
 end
 
 update()
