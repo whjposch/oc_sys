@@ -2,7 +2,7 @@ local mainUrl = "https://raw.githubusercontent.com/whjposch/oc_sys/main/"
 
 
 function download(mainUrl, subUrl, fileName)
-    return "wget -f " .. mainUrl .. subUrl .. fileName .. subUrl .. fileName .. ".lua"
+    return "wget " .. mainUrl .. subUrl .. fileName .. subUrl .. fileName .. ".lua -f"
 end
 
 function update()
